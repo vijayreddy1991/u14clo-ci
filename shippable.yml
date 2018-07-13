@@ -12,5 +12,5 @@ build:
   ci:
     - lein version
     - echo "(print *clojure-version*)" 
-    - clj clojure.main
+   
    
