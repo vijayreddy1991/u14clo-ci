@@ -10,6 +10,8 @@ build:
     pull: true
       
   ci:
+    - dpkg --purge --force-depends ca-certificates-java
+    - sudo apt-get install ca-certificates-java
     - lein version
     - echo "(print *clojure-version*)" 
     - echo "(print *clojure-version*)" > clojure.main  
