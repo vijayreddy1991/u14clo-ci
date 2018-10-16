@@ -13,5 +13,4 @@ build:
     - lein version
     - echo "(print *clojure-version*)" 
     - echo "(print *clojure-version*)" > clojure.main  
-    - java -jar /root/lib/clojure-1.9.0.jar clojure.main
-    - clj clojure.main
+    - *clojure-version*
