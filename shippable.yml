@@ -6,7 +6,7 @@ lein:
 build:
   pre_ci_boot:
     image_name: drydock/u14cloall
-    image_tag: v6.9.4
+    image_tag: master
     pull: true
       
   ci:
