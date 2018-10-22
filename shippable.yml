@@ -6,12 +6,12 @@ lein:
 build:
   pre_ci_boot:
     image_name: drydock/u14cloall
-    image_tag: master
+    image_tag: v6.9.4
     pull: true
       
   ci:
-    - dpkg --purge --force-depends ca-certificates-java
-    - sudo apt-get install ca-certificates-java
+    #- dpkg --purge --force-depends ca-certificates-java
+    #- sudo apt-get install ca-certificates-java
     - lein version
     - echo "(print *clojure-version*)" 
     - echo "(print *clojure-version*)" > clojure.main  
