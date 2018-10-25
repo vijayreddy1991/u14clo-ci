@@ -15,7 +15,7 @@ build:
     pull: true
       
   ci:
-    - shipctl jdk set openjdk
+    - shipctl jdk set openjdk8
     - lein version
     - java -version
     - echo "(print *clojure-version*)" 
