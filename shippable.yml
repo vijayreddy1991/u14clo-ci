@@ -2,15 +2,21 @@ language: clojure
 
 lein:
  - 1.9.0
+ 
+env:
+ - IMAGE_TAG: v6.9.4
+ - IMAGE_TAG: v6.8.4
+ - IMAGE_TAG: v6.7.4
   
 build:
   pre_ci_boot:
     image_name: drydock/u14cloall
-    image_tag: master
+    image_tag: $IMAGE_TAG
     pull: true
       
   ci:
     - lein version
+    - java -version
     - echo "(print *clojure-version*)" 
     - echo "(print *clojure-version*)" > clojure.main  
     - clj clojure.main
