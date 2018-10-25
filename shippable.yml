@@ -19,7 +19,7 @@ env:
  - IMAGE_TAG: v6.8.4
    J_VERSION: "oraclejdk10"
  - IMAGE_TAG: v6.7.4
-   J_VERSION: "oraclejdk10"
+   J_VERSION: "oraclejdk8"
   
 build:
   pre_ci_boot:
