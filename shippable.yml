@@ -5,8 +5,11 @@ lein:
  
 env:
  - IMAGE_TAG: v6.9.4
+   J_VERSION: "openjdk10"
  - IMAGE_TAG: v6.8.4
+   J_VERSION: "openjdk9"
  - IMAGE_TAG: v6.7.4
+   J_VERSION: "openjdk8"
   
 build:
   pre_ci_boot:
@@ -15,7 +18,7 @@ build:
     pull: true
       
   ci:
-    - shipctl jdk set openjdk10
+    - shipctl jdk set $J_VERSION
     - lein version
     - java -version
     - echo "(print *clojure-version*)" 
