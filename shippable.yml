@@ -1,18 +1,18 @@
 language: clojure
 
 lein:
- - 1.9.0
+ - 1.10.0
  
-env:
- - IMAGE_TAG: master
-   J_VERSION: "openjdk11"
- - IMAGE_TAG: master
-   J_VERSION: "oraclejdk11"
+#env:
+ #- IMAGE_TAG: master
+  # J_VERSION: "openjdk11"
+ #- IMAGE_TAG: master
+ #  J_VERSION: "oraclejdk11"
   
 build:
   pre_ci_boot:
     image_name: drydock/u14cloall
-    image_tag: $IMAGE_TAG
+    image_tag: master
     pull: true
       
   ci:
